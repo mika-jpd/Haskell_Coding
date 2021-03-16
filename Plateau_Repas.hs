@@ -1,8 +1,9 @@
 
+
 -- Petit programme qui permet de créer un plateau-repas et l'enrichir à l'aide d'informations complémentaires
 -- sous forme de nombre unique ou organisé dans un deuxième arbre enraciné.
 
-
+-- t = type de l'élément (plateau, plat, entree, dessert ou suplement)
 data Node a = Node {t :: String
                    ,name :: String
                    ,value :: a
