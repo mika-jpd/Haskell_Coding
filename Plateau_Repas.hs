@@ -14,9 +14,13 @@ data Tree a = Empty | Tree (Node a) (Tree a) (Tree a) (Tree a) deriving (Show, R
 singleton :: Node a -> Tree a
 singleton x = Tree x Empty Empty Empty
 
--- insert des éléments de plateau en fonction de leur type. Les types ne son't
+-- Insert des éléments de plateau en fonction de leur type. Les types ne son't
 -- qu'utilisés afin de placer les éléments et leur information complémentaire au même
 -- endroit dans leurs arbres réspectifs.
+
+-- (J'aurais pu ne pas imposer d'ordre mais cela m'aurait forcé à faire une traversée d'arbre par info VAT
+-- d'un arbre VAT spécifique à un élément du plateau repas afin d'assurer que la tax "dessert" ne sois qu'appliqué
+-- au prix d'un plat principal par exemple).
 treeInsert :: (Eq a) => Node a -> Tree a -> Tree a
 treeInsert n Empty = singleton n
 treeInsert n@(Node t _ _) (Tree node l m r)
