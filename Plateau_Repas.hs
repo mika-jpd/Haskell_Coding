@@ -17,7 +17,6 @@ singleton x = Tree x Empty Empty Empty
 -- insert des éléments de plateau en fonction de leur type. Les types ne son't
 -- qu'utilisés afin de placer les éléments et leur information complémentaire au même
 -- endroit dans leurs arbres réspectifs.
--- J'aurais pu laisser l'ordre
 treeInsert :: (Eq a) => Node a -> Tree a -> Tree a
 treeInsert n Empty = singleton n
 treeInsert n@(Node t _ _) (Tree node l m r)
