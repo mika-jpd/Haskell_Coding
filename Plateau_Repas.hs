@@ -82,7 +82,7 @@ fold_price (Tree (Node _ _ val) l m r) = val + (fold_price l) + (fold_price m) +
 -- prend une liste de node avec pour premier élément le node "platter" (plateau) et a pour output
 -- un arbre de plateau (avec ou sans suplément). L'ordre des node suivants n'est pas important.
 -- (Le but du node "platter" (plateau) est pour que la racine de l'arbre ai du sense dans le context
--- de création d'un plateau repas. On peut imaginé qu'avoir plateau comme racine annonce en quelque sorte
+-- de création d'un plateau repas. On peut imaginé qu'avoir "plateau" (plateau) comme racine annonce en quelque sorte
 -- le type de l'arbre)
 platter_creation :: (Num a, Eq a) => [Node a] -> Tree a -> Tree a
 platter_creation [] tree = tree
