@@ -35,9 +35,12 @@ enrichTree_Int (Tree (Node node_type node_name node_val) l m r) vat = Tree new (
     where new = Node{t = node_type, name = node_name, value = node_val*vat}
 
 --------------------------------------------------------------------------------------------------------------------------------------------
--- enrichi les données d'un arbre avec des données présentes de manière symétrique dans un 
---autre arbre. Utilise la symétrie dans la composition de l'arbre pour enrichir l'arbre
--- cela n'est que possible car treeInsert impose une structure particulière à l'arbre.
+-- Enrichi les données d'un arbre avec des données présentes de manière symétrique dans un 
+-- autre arbre. Utilise la symétrie dans la composition de l'arbre pour enrichir l'arbre.
+-- Cela n'est que possible car treeInsert impose une structure particulière à l'arbre et si lors
+-- de la création de l'arbre, le plat et le plateau sont ajoutés dans le même ordre dans l'arbre VAT
+-- et l'arbre plateau.
+-- Cette fonction n'utilise aucun pattern matching
 enrichTree_Tree :: (Num a, Eq a) => Tree a -> Tree a -> Tree a
 enrichTree_Tree Empty _ = Empty
 enrichTree_Tree x Empty = x
@@ -122,7 +125,7 @@ main = do
                         , name = "Oeuf"
                         }
     let vat_plat = Node { t = "Plat"
-                      , value = 1.20
+                      , value = 1.2
                       , name = "Cheeseburger"
                       } 
     let vat_desert = Node { t = "Dessert"
@@ -130,13 +133,12 @@ main = do
                         , name = "Fondant"
                         }
     let vat_supplement = Node { t = "Supplement"
-                            , value = 1.2
+                            , value = 1.6
                             , name = "Cheddar"
                             }
 ------------------Arbre VAT -------------------------------
-    let list_nodes_arbre_vat = vat_platter:vat_entree:vat_plat:vat_desert:vat_supplement:[]
+    let list_nodes_arbre_vat = vat_platter:vat_entree:vat_supplement:vat_plat:vat_desert:[]
     let arbre_vat = platter_creation list_nodes_arbre_vat Empty
-    print (tree_to_list arbre_vat [])
     
 -----------------Arbre Plateau 1 avec enrichTree_Int--------------------------
     let list_nodes_arbre1 = platter:entree:supplement:plat:desert:[]
@@ -162,7 +164,7 @@ main = do
     print(enriched_arbre2)
     -- 3) avec enrichTree_Tree2
     print(enriched_arbre3)
-    
+
     print(fold_price enriched_arbre1)
     print(fold_price enriched_arbre2)
     print(fold_price enriched_arbre3)
