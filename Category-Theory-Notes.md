@@ -55,7 +55,7 @@ fInt x = ()
 parametrically polymorphic: functions with the same formula for any type (thing *f44* or ```unit :: a -> ()```)
 
 ## Categories Great and Small
-Empty category, category of all cetegories where empty is part of it.
+Empty category, category of all cetegories st. {} &#8712; {*set of all sets*}
 We can thinnk of building a cetgory as putting identity arrows, then directed arrows between nodes of a graph, then making arrows representing composition of arrows. By doing this, you're creating a category which has an object for every node and all possible *chains* of composable graph edges as morphisms.
 
 In Set language we have:
@@ -77,3 +77,9 @@ In Set language we have:
 * associativity of composition
 * <sub>a</sub>P<sub>b</sub> and <sub>b</sub>P<sub>a</sub> 
 * any two objects are in a relation
+
+
+
+Useful Links:
+* https://guides.github.com/features/mastering-markdown/
+* https://www.toptal.com/designers/htmlarrows/math/
