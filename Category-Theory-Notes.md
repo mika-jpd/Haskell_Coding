@@ -58,6 +58,8 @@ parametrically polymorphic: functions with the same formula for any type (thing 
 Empty category, category of all cetegories where empty is part of it.
 We can thinnk of building a cetgory as putting identity arrows, then directed arrows between nodes of a graph, then making arrows representing composition of arrows. By doing this, you're creating a category which has an object for every node and all possible *chains* of composable graph edges as morphisms.
 
+In Set language we have:
+
 **Pre-order**
 * ***id***<sub>A
 * composition
