@@ -83,3 +83,4 @@ In Set language we have:
 Useful Links:
 * https://guides.github.com/features/mastering-markdown/
 * https://www.toptal.com/designers/htmlarrows/math/
+* https://github.github.com/gfm/#entity-and-numeric-character-references
