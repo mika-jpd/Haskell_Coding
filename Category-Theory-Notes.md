@@ -9,7 +9,7 @@ Arrows are called morphisms and act just like functions. Functions can be called
 * g(f(x)) = g . f (x)
 
 In Haskell this gives
-```
+```haskell
 f :: A->B
 g:: B-> C
 
