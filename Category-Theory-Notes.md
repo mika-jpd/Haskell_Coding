@@ -3,7 +3,7 @@ Summary of some of the important concepts in Bartosz Milewski's "Category Theory
 
 ## Table of Contents
 
-## Composition
+## Ch. 1: Composition
 Category: consists of objects and arrows between these objects. It's that simple
 Arrows are called morphisms and act just like functions. Functions can be called one after another and compose each other; this is called composition denoted by
 * g(f(x)) = g . f (x)
@@ -28,7 +28,7 @@ A composition has three properties:
  ``` 
 Why is Category Theory useful for functional programming? In functional programming, once a block is implemented, we forget the details of implementation and focus on its interaction with other functions. In Category Theory we look at how objects are connected, not what's inside.
 
-## Types and Functions
+## Ch. 2: Types and Functions
 Types are sets of values. 
 
 For example: 
@@ -54,7 +54,7 @@ fInt x = ()
 
 parametrically polymorphic: functions with the same formula for any type (thing *f44* or ```unit :: a -> ()```)
 
-## Categories Great and Small
+## Ch. 3: Categories Great and Small
 Empty category, category of all cetegories st. {} &#8712; {*set of all sets*}
 We can thinnk of building a cetgory as putting identity arrows, then directed arrows between nodes of a graph, then making arrows representing composition of arrows. By doing this, you're creating a category which has an object for every node and all possible *chains* of composable graph edges as morphisms.
 
