@@ -130,7 +130,9 @@ This category will describe what operations are going on and write the result of
 ## Products and Coproducts
 Universal construction is a way to describe an objects in terms of its relationship to other objects. We might try to first find what the *intitial* object is:
 
-***initial object***<sub>def</sub>: the object that has one and only one morphism going to any object in the category. It is the ```absurd :: Void -> a``` function in Haskell with regards to the sets and functions.
+***initial object***<sub>def</sub>: the object that has one and only one morphism going to any object in the category. It is uniquely the ```absurd :: Void -> a``` function in Haskell with regards to the sets and functions.
+
+***terminal object***<sub>def</sub>: *b* is "more terminal" than *a* if there is a morphism a -> b. *The* terminal object is the object with one and only one morphism coming to it from any object in the category. It is uniquely the ```unit :: a -> ()```.
 
 Useful Links:
 * https://guides.github.com/features/mastering-markdown/
